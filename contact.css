@@ -1,0 +1,222 @@
+/*-------------------MOONLIT PAGES STUDIO — Contact Page-------------------*/
+
+/*-------------------Contact Hero Section-------------------*/
+.contact-hero {
+  padding: 160px 0 70px;
+  text-align: center;
+  background:
+    radial-gradient(ellipse 65% 55% at 50% 50%, rgba(163, 177, 138, 0.12) 0%, transparent 60%),
+    var(--bg);
+}
+
+/*-------------------Contact Grid-------------------*/
+.contact-grid {
+  padding: 60px 0 100px;
+  background: var(--bg);
+}
+.contact-grid .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: start;
+}
+
+/*--------Info Column--------*/
+.contact-info h3 {
+  font-family: var(--font-heading);
+  font-size: 26px;
+  font-weight: 300;
+  color: var(--text-head);
+  margin-bottom: 14px;
+}
+
+.contact-info h3 em {
+    color: var(--lavender-dk);
+    font-style: italic;
+}
+
+.contact-info p {
+  color: var(--text-body);
+  line-height: 1.9;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 28px;
+  font-style: normal;
+}
+
+.contact-links a {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  color: var(--text-body);
+  font-family: var(--font-heading);
+  font-size: 16px;
+}
+.contact-links a:hover { 
+  color: var(--lavender-dk); 
+}
+.newsletter-form {
+  margin-top: 60px;
+}
+.newsletter-form span{
+  font-family: var(--font-accent);
+  font-size: 18px;
+  color: var(--amber);
+  letter-spacing: 2px;
+}
+
+.newsletter-form p{
+  margin-top: 10px;
+}
+
+
+
+/*--------Form Column--------*/
+form.contact-form-wrap {
+    margin: 0;
+}
+
+.contact-form-wrap {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 42px 38px;
+  box-shadow: var(--shadow-md);
+}
+.contact-form-wrap h2 {
+  font-family: var(--font-accent);
+  font-size: 26px;
+  color: var(--amber);
+  margin-bottom: 28px;
+}
+.form-group { margin-bottom: 22px; }
+.form-group label {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 12px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.form-group input, .form-group textarea {
+  width: 100%;
+  background: var(--bg);
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  padding: 13px 16px;
+  font-family: var(--font-body);
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--lavender);
+}
+
+.contact-newsletter {
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+
+.contact-newsletter p {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.contact-newsletter label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.contact-newsletter input[type="checkbox"] {
+  accent-color: var(--lavender-dk);
+  width: 16px; 
+  cursor: pointer;
+}
+
+.contact-newsletter span {
+  text-transform: none;
+  font-family: var(--font-heading);
+  font-size: 15px;
+  color: var(--text-body);
+  letter-spacing: normal;
+}
+
+.form-actions { margin-top: 28px; }
+.form-actions .btn {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/*
+Request 2 - Form validation and error messages contact.js
+*/
+
+/* Red border on invalid fields */
+.form-group input.error,
+.form-group textarea.error {
+    border-color: #c97b7b;
+    background: #fff8f8;
+}
+
+/* Error message text that appears below each field */
+.error-message {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 13px;
+    color: red;
+    margin-top: 6px;
+}
+
+/* Success message — hidden*/
+/* contact.js adds .visible when the form passes validation */
+#form-sent {
+    display: none;
+    text-align: center;
+    padding: 28px 22px;
+    background: #f0f8f0;
+    border: 1.5px solid var(--sage-dk);
+    border-radius: 12px;
+    margin-top: 24px;
+}
+
+#form-sent.visible {
+    display: block;
+}
+
+#form-sent h3 {
+    font-family: var(--font-heading);
+    font-size: 22px;
+    color: #3d6e3d;
+    margin-bottom: 8px;
+}
+
+#form-sent p {
+    font-size: 15px;
+    color: #5a8a5a;
+    line-height: 1.6;
+}
+
+/*-------------------Responsive-------------------*/
+
+@media (max-width: 900px) {
+    .contact-grid .container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+

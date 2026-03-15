@@ -1,0 +1,435 @@
+/*-------------------MOONLIT PAGES STUDIO — Main Stylesheet-------------------*/
+
+*{
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+}
+
+/*-------------------Global Styles-------------------*/
+
+:root {
+  /* Fonts */
+  --font-heading: "Cormorant Garamond", serif;
+  --font-body: "Lora", serif;
+  --font-accent: "Dancing Script", cursive;
+
+  /* Backgrounds */
+  --bg:          #FFF8E7;
+  --bg-warm:     #FDF2DC;
+  --bg-blush:    #FDF0EC;
+  --bg-lavender: #F5F0FF;
+  --bg-sage:     #F2F5EE;
+  --card-bg:     #FFFCF5;
+
+  /* Palette */
+  --lavender:    #C8B6FF;
+  --lavender-md: #B0A0E0;
+  --lavender-dk: #9175C8;
+  --pink:        #F4C2C2;
+  --pink-dk:     #C87E7E;
+  --brown:       #8E6E53;
+  --brown-dk:    #4E3220;
+  --brown-lt:    #A68B73;
+  --sage:        #A3B18A;
+  --sage-dk:     #6E8C55;
+  --amber:       #B87840;
+  --amber-lt:    #D4A060;
+
+  /* Text */
+  --text-head:  #4A2E1A;
+  --text-body:  #7A5840;
+  --text-muted: #A08060;
+  --text-soft:  #C4A880;
+
+  /*AI assisted values*/
+  --border:     rgba(142, 110, 83, 0.20);
+  --border-lav: rgba(200, 182, 255, 0.25);
+  --shadow-sm:  0 2px 14px rgba(120, 80, 40, 0.09);
+  --shadow-md:  0 8px 32px rgba(120, 80, 40, 0.13);
+  --shadow-lg:  0 20px 50px rgba(120, 80, 40, 0.17);
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg);
+  color: var(--text-body);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+.text-center { text-align: center; }
+
+
+/*--------Layout--------*/
+.container {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+/*--------Header and Navigation--------*/
+.logo {
+  font-family: var(--font-accent);
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--brown-dk);
+  cursor: pointer;
+}
+
+.logo:hover { color: var(--lavender-dk); }
+
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 60px;
+  background: var(--bg);
+  box-shadow: var(--shadow-sm);
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 36px;
+}
+
+nav li a {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  cursor: pointer;
+  position: relative;
+}
+
+/* AI assisted navigation underline animation */
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -3px; left: 0; right: 0;
+  height: 1px;
+  background: var(--lavender-dk);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s;
+}
+.nav-links a:hover,
+.nav-links a.active-link { color: var(--brown-dk); }
+.nav-links a:hover::after,
+.nav-links a.active-link::after { transform: scaleX(1); }
+
+/*--------Shared Section Headings--------*/
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-label {
+  font-family: var(--font-accent);
+  font-size: 18px;
+  color: var(--amber);
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  font-weight: 300;
+  color: var(--text-head);
+  line-height: 1.2;
+}
+
+.section-title em {
+  font-style: italic;
+  color: var(--lavender-dk);
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 18px 0 40px;
+}
+
+/* AI assisted divider line gradient */
+.divider-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--border), transparent);
+}
+.divider-star { color: var(--amber); font-size: 14px; }
+
+/*--------Buttons--------*/
+.btn {
+  display: inline-block;
+  padding: 13px 32px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #B0A0E0, #C8B6FF);
+  color: #fff;
+  box-shadow: var(--shadow-md); 
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(200, 182, 255, 0.6);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--brown);
+  border: 1.5px solid var(--border);
+}
+.btn-outline:hover {
+  border-color: var(--lavender);
+  color: var(--lavender-dk);
+  background: var(--border-lav);
+  transform: translateY(-2px);
+}
+
+/*--------EMAIL FORM (shared: home + contact)--------*/
+
+.email-form {
+  display: flex;
+  border: 1.5px solid var(--border-lav);
+  border-radius: 30px;
+  margin: 30px auto 0;
+  max-width: 480px;
+  background: var(--card-bg);
+  box-shadow: 0 4px 20px var(--border-lav);
+}
+
+.email-form input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 14px 22px;
+  color: var(--text-head);
+  font-family: var(--font-body);
+  font-size: 15px;
+}
+
+.email-form input::placeholder { color: var(--text-soft); }
+
+.email-form button {
+  background:  var(--lavender-md);
+  border: none;
+  padding: 14px 24px;
+  color: #fff;
+  border-radius: 0 28px 28px 0;
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.email-form button:hover {opacity: 0.9;}
+
+.email-note {
+  font-size: 13px;
+  color: var(--text-soft);
+  margin-top: 16px;
+  font-family: var(--font-heading);
+  letter-spacing: 0.5px;
+}
+
+
+/* ------------------- FOOTER ------------------- */
+
+body > footer { /*> direct child selector*/
+  background: var(--bg-warm);
+  border-top: 1px solid var(--border);
+  padding: 60px 0 30px;
+  position: relative;
+  z-index: 2;
+}
+.footer-inner {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 50px;
+  margin-bottom: 50px;
+}
+.footer-brand .logo {
+  display: block;
+  margin-bottom: 14px;
+  font-size: 28px;
+}
+
+.footer-brand p {
+  color: var(--text-body);
+  font-size: 15px;
+  line-height: 1.85;
+  max-width: 260px;
+}
+
+.footer-col h4 {
+  font-family: var(--font-heading);
+  font-size: 12.5px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 18px;
+}
+
+.footer-col ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-col ul li a {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  color: var(--text-body);
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.25s;
+}
+
+.footer-col ul li a:hover { color: var(--lavender-dk); }
+
+.footer-bottom {
+  border-top: 1px solid var(--border);
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-copy {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  color: var(--text-muted);
+  letter-spacing: 0.6px;
+}
+
+.footer-note {
+  font-family: var(--font-accent);
+  font-size: 16px;
+  color: var(--text-muted);
+  opacity: 0.8;
+}
+
+/*--------
+Request 1 - Hamburger menu nav.js
+Hidden on desktop, seen on mobile
+--------*/
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--brown);
+  border-radius: 2px;
+}
+
+/* Responsive Mobile nav */
+@media (max-width: 768px) {
+  
+  nav {
+    padding: 16px 24px;
+    position: fixed;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 18px;
+
+    position: absolute;
+    top: 100%;
+    left: 0; right: 0;
+    background: var(--bg);
+    padding: 22px 24px 28px;
+    box-shadow: var(--shadow-md);
+  }
+
+  /* nav.js toggles this class to show/hide the menu */
+    nav ul.open {
+        display: flex;
+    }
+
+    /* Stack footer columns */
+    .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+}
+
+/*--------
+Request 3 - Back to top button - main.js
+--------*/
+
+#back-to-top {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  
+  padding: 12px 16px;
+
+  background: linear-gradient(135deg, var(--lavender-md), var(--lavender));
+  color: #fff ;
+
+  border: none;
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  visibility: hidden;
+  
+}
+
+/* main.js adds this once the user scrolls 300px */
+#back-to-top.visible {
+    visibility: visible;
+}
+
+#back-to-top:hover {
+    transform: translateY(-3px);
+}
+

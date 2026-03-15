@@ -1,0 +1,247 @@
+/*-------------------MOONLIT PAGES STUDIO — Homepage-------------------*/
+
+/*-------------------Hero Section-------------------*/
+
+section.hero-section .container {
+  text-align: center;
+  max-width: 760px;
+  margin:auto;
+}
+
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 120px 5% 80px;
+  position: relative;
+  overflow: hidden;
+  /*AI assisted values*/
+  background:
+    radial-gradient(ellipse 70% 55% at 50% 45%, rgba(200, 182, 255, 0.20) 0%, transparent 65%),
+    radial-gradient(ellipse 50% 40% at 18% 75%, rgba(244, 194, 194, 0.18) 0%, transparent 60%),
+    radial-gradient(ellipse 45% 35% at 82% 20%, rgba(163, 177, 138, 0.14) 0%, transparent 55%),
+    var(--bg);
+}
+
+.hero-section span {
+  font-family: var(--font-accent);
+  font-size: 22px;
+  color: var(--amber);
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 20px;
+}
+.hero-section h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(45px, 7vw, 88px); /* allows scaling with screen size */
+  font-weight: 300;
+  color: var(--text-head);
+  letter-spacing: 0.16px;
+  margin-bottom: 24px;
+}
+.hero-section em {
+  font-style: italic;
+  color: var(--lavender-dk);
+}
+.hero-section p {
+  font-size: 18px;
+  color: var(--text-muted);
+  line-height: 1.85;
+  max-width: 520px;
+  margin: 0 auto 44px;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/*-------------------Featured Section-------------------*/
+.featured {
+  padding: 100px 0;
+  background: var(--bg);
+}
+
+/*--------Product Grid--------*/
+
+.products-grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/*--------Product Cards--------*/
+
+.product-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.product-image {
+  width: 100%;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 20px;
+}
+
+.product-info > span {  /*> direct child selector*/
+  font-family: var(--font-heading);
+  font-size: 14px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--brown-dk);
+  margin-bottom: 7px;
+  display: block;
+}
+
+.product-info h3 {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--text-head);
+  line-height: 1.3;
+}
+
+.product-cta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.product-cta span {
+  font-family: var(--font-heading);
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--lavender-dk);
+}
+
+.view-all {
+  margin-top: 44px;
+  text-align: center;
+}
+
+/*--------
+Request 7 - Daily Inspiration Quotes 
+--------*/
+.quote-section {
+  padding: 70px 0;
+  text-align: center;
+  background: var(--bg-lavender);
+}
+
+.quote-text {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-style: italic;
+  color: var(--text-head);
+  max-width: 700px;
+  margin: 12px auto 16px;
+}
+.quote-author {
+  font-family: var(--font-accent);
+  font-size: 18px;
+  display: block;
+}
+
+/*-------------------About Section-------------------*/
+.about-section {
+  text-align: center;
+  padding: 80px 20px;
+  /*AI Generated background gradient*/
+  background:
+    radial-gradient(ellipse 60% 70% at 10% 50%, rgba(244, 194, 194, 0.16) 0%, transparent 60%),
+    var(--bg-blush);
+}
+
+.about-section .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.about-image {
+  position: relative;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: var(--shadow-md);
+}
+
+.about-text {
+  text-align: left;
+}
+
+.about-text .section-header { text-align: center; }
+.about-text > a { display: block; text-align: center; }
+
+.about-text p {
+  color: var(--text-body);
+  line-height: 1.9;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.about-text p em { color: var(--lavender-dk); font-style: italic; }
+
+
+/*-------------------Newsletter-------------------*/
+.newsletter {
+  padding: 100px 0;
+  text-align: center;
+  background:
+    radial-gradient(ellipse 55% 60% at 50% 50%, rgba(200, 182, 255, 0.14) 0%, transparent 65%),
+    var(--bg-lavender);
+}
+
+.newsletter .container { max-width: 600px; }
+
+.newsletter p {
+  color: var(--text-body);
+  font-size: 17px;
+  line-height: 1.85;
+  margin-bottom: 36px;
+}
+
+/*-------------------Responsive-------------------*/
+
+@media (max-width: 900px) {
+    .products-grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .about-section .container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .products-grid-container {
+        grid-template-columns: 1fr;
+    }
+}

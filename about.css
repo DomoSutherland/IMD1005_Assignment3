@@ -1,0 +1,262 @@
+/*-------------------MOONLIT PAGES STUDIO — Aboutpage Stylesheet-------------------*/
+
+/*--------Hero--------*/
+.about-hero {
+  padding: 160px 0 90px;
+  text-align: center;
+  background:
+    radial-gradient(ellipse 70% 60% at 50% 55%, rgba(244, 194, 194, 0.18) 0%, transparent 65%),
+    radial-gradient(ellipse 45% 40% at 80% 20%, rgba(200, 182, 255, 0.13) 0%, transparent 55%),
+    var(--bg);
+}
+
+.about-hero p {
+  max-width: 570px;
+  margin: 0 auto;
+  color: var(--text-body);
+  line-height: 1.8;
+  font-size: 16.5px;
+}
+
+.about-hero .section-title { margin-bottom: 20px; }
+
+/*--------Founder Section--------*/
+.founder-section {
+  padding: 80px 0;
+  background: var(--bg-blush);
+}
+
+.founder-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 70px;
+  align-items: start;
+}
+
+.founder-img-wrap {
+  position: sticky;
+  top: 100px;
+}
+
+.founder-img img{
+  width: 100%;
+  aspect-ratio: 3/4;
+  border-radius: 14px;
+}
+
+.founder-section blockquote {
+  background: var(--card-bg);
+  border: 1px solid var(--border-lav);
+  border-left: 3px solid var(--lavender);
+  padding: 20px 22px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: var(--shadow-sm);
+  quotes: none; 
+}
+
+.founder-section blockquote p {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-style: italic;
+  color: var(--text-head);
+  line-height: 1.5;
+}
+
+.founder-section blockquote cite {
+  display: block;
+  font-family: var(--font-accent);
+  color: var(--amber);
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.founder-story h3 {
+  font-family: var(--font-heading);
+  font-size: 26px;
+  font-weight: 400;
+  color: var(--text-head);
+  margin: 0 0 16px;
+}
+.founder-story h3 em { color: var(--lavender-dk); font-style: italic; }
+.founder-story p {
+  color: var(--text-body);
+  line-height: 1.8;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+.founder-story p em { color: var(--pink-dk); font-style: italic; }
+.story-divider {
+  font-size: 24px;
+  color: var(--amber);
+  display: block;
+  margin: 28px 0;
+}
+
+.founder-story .btn { margin-top: 25px; }
+
+/* ------------------- Gallery ------------------- */
+.studio-gallery {
+  padding: 80px 0;
+  background: var(--bg);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 16px;
+  margin-top: 50px;
+}
+
+.gallery-item:first-child { grid-row: 1/3; }
+
+.gallery-item {
+  border-radius: 12px;
+  border: 1px solid var(border);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.gallery-item img {
+  width: 100%;
+  min-height: 180px;
+  object-fit: cover;
+}
+
+.gallery-item img:hover { transform: scale(1.04); }
+
+
+/* ------------------- Values------------------- */
+
+.values-section {
+  padding: 80px 0;
+  background:
+    radial-gradient(ellipse 60% 50% at 50% 50%, rgba(163, 177, 138, 0.10) 0%, transparent 65%),
+    var(--bg-sage);
+  text-align: center;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 28px;
+  list-style: none;
+  padding: 0;
+}
+
+.value-card {
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 38px 28px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+}
+
+.value-icon { font-size: 35px; margin-bottom: 16px; display: block; }
+.value-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--text-head);
+  margin-bottom: 12px;
+}
+
+.value-desc {
+  color: var(--text-body);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* Request 5 - FAQ Accodion */
+.faq-section {
+  padding: 80px 0;
+  background: var(--bg-lavender);
+}
+
+.faq-list {
+  max-width: 740px;
+  margin: 0 auto;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faq-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 20px 24px;
+  font-family: var(--font-heading);
+  font-size: 18px;
+  color: var(--text-head);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.faq-question:hover {
+  color: var(--lavender-dk)
+}
+
+/*AI generated + icon rotation
+The + icon rotates to × when the item is open */
+.faq-icon {
+    font-size: 22px;
+    font-weight: 300;
+    flex-shrink: 0;       
+    transition: transform 0.3s ease;
+    color: var(--amber);
+}
+.faq-item.open .faq-icon {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+}
+
+.faq-answer p {
+  padding: 0 24px 22px;
+  font-size: 16px;
+  color: var(--text-body);
+}
+
+/*-------------------Responsive-------------------*/
+@media (max-width: 900px) {
+  .founder-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .founder-img-wrap {
+    position: relative;
+    top: auto;
+  }
+  .values-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .gallery-item:first-child { 
+    grid-row: auto; 
+  }
+}
+
+@media (max-width: 600px) {
+    .values-grid { grid-template-columns: 1fr; }
+}
