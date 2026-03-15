@@ -2,8 +2,8 @@
 
 ## Live Site
 
-🔗 GitHub Repository: `[Add your GitHub repo link here]`
-🌐 Live GitHub Pages: `[Add your GitHub Pages URL here]`
+🔗 GitHub Repository: `https://github.com/DomoSutherland/IMD1005_Assignment3`
+🌐 Live GitHub Pages: `https://domosutherland.github.io/IMD1005_Assignment3/`
 
 **Course:** IMD1005A Web Development 
 **Student Name:** Dominique Sutherland
