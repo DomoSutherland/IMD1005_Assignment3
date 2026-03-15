@@ -10,13 +10,12 @@
 **Student Number:** 101381790
 
 ---
-**Note:** New website because of note on previous assignment
 
 ## About the Client
 
 Moonlit Pages Studio is a fictional small independent creative business created for this assignment. The studio is run by a solo founder named Mia and sells handmade journals, illustrated bookmarks, art prints, and stationery sets. All products are inspired by Studio Ghibli, nature, and folklore aesthetics.
 
-> **Note on client name:** The name "Moonlit Pages" was invented independently for this project. After starting the assignment I became aware that real businesses trade under this name (moonlitpages.co, moonlitpages.ca). 
+> **Note on client name:** The name "Moonlit Pages" was made up independently for this project. After starting the assignment, I became aware that real businesses have this name (moonlitpages.co, moonlitpages.ca). 
 
 **Site purpose:** To give the studio a dedicated brand presence beyond Etsy — showcasing products, telling the founder's story, and building a mailing list through a cohesive three-page website.
 
@@ -32,31 +31,31 @@ Moonlit Pages Studio is a fictional small independent creative business created 
 
 ---
 **Overall Challenges:** 
-Going back and forth between javscript, css and html files especially to make sure that class and id names were correct. Small spelling errors often cause entire crashes.
+Going back and forth between JavaScript, CSS, and HTML files, especially to make sure that class and id names were correct. Small spelling errors often cause entire crashes. Time used to understand each JavaScript function 
 
 ## Assignment 3 — JavaScript Features Checklist
 
 ### Request 1 — Responsive Hamburger Menu (`nav.js`)
 
-On screens 768px and below the nav links collapse and a three-line hamburger button appears. Clicking it toggles the `.open` class on the nav list. Clicking any nav link also closes the menu. 
+On screens 768px and below, the nav links collapse and a three-line hamburger button appears. Clicking it toggles the `.open` class on the nav list. Clicking any nav link also closes the menu. 
 
-**Challenge:** Removing the `onclick` inline attribute and wiring everything through `addEventListener` in the external JS file took some adjustment but made the code much cleaner.
+**Challenge:** Removing the `onclick` inline attribute that I initially attempted and wiring everything through `addEventListener` in the external JS file took some adjustment, but made the code much cleaner.
 
 ---
 
 ### Request 2 — Form Validation with Error Messages (`contact.js`)
 
-The contact form validates four fields before submission: name, email, subject , and message . Error messages appear inline below each field. A green success box appears on submission.
+The contact form validates four fields before submission: name, email, and message. Error messages appear below each field in red. A green success box appears on submission.
 
-**Challenge:** Initially the function was named incorrectly (`errorPresent` instead of `showError`) so all the `showError()` calls were crashing. 
+**Challenge:** Initially, the function was named incorrectly (`errorPresent` instead of `showError`) so all the `showError()` calls were crashing. 
 
 ---
 
 ### Request 3 — Back to Top Button (`main.js`)
 
-A fixed circular button in the bottom-right corner. Hidden by default. After 300px of scroll, `main.js` adds the `.visible` class which transitions it in. Clicking it calls `window.scrollTo({ top: 0, behavior: 'smooth' })`.
+A fixed circular button in the bottom-right corner. Hidden by default. After 300px of scroll, `main.js` adds the `.visible` class, which makes it appear. Clicking it calls `window.scrollTo({ top: 0, behavior: 'smooth' })` to make it scroll to the top of the page.
 
-**Challenge:** The button was not appearing at first.
+**Challenge:** The button was not appearing at first. Funnily, it was just because I had misspelt the script tag in the HTML file after searching for the problem.
 
 ---
 
@@ -69,15 +68,22 @@ Four FAQ items on the About page. Each item has a `<button class="faq-question">
 
 ### Request 7 — Fetch API: Daily Inspiration Quote (`main.js`)
 
-Uses `async` and `fetch()` to request a random quote from `https://randominspirationalquotes.onrender.com` on page load. Displays a "Loading today's inspiration..." message while the request loading. On success, displays the quote and author. On failure falls back to a coded quote so the page doesnt break or leave a space.
+Uses `async` and `fetch()` to request a random quote from `https://randominspirationalquotes.onrender.com` on page load. Displays a "Loading today's inspiration..." message while the request is loading. On success, it displays the quote and author. On failure falls back to a coded quote so the page doesn't break or leave a space.
 
 The quote section only appears on the home page, so `main.js` checks `if (document.getElementById('quote-text'))` before calling `fetchQuote()`.
 
-**Challenge:** Understanding `async/await` and the `try/catch` pattern for error handling. The guard check for pages without the quote section was a bug I had to debug after seeing console errors on the other pages.
+**Challenge:** Understanding `async/await` and the `try/catch` pattern for error handling. Also, understanding where to get the API link. At first, the quote was not loading.
 
 ---
+## AI Usage Documentation
 
-**AI policy compliance:** AI was used to explain concepts, debug specific errors, and clarify syntax. All JavaScript logic was written and understood by me. Any code suggested by AI was reviewed, understood, and adapted before use. No complete features were generated by AI wholesale.
+| Tool | Example for What it was Used For | 
+|------|----------|
+| Claude | Debugging CSS layout issues — grid not collapsing on mobile, about-section body text being centred when it shouldn't be, How the direct child selector (`>`) works and why broad selectors like `.about-section p` can accidentally match elements they shouldn't, Explaining `async/await` and `try/catch` for the Fetch API
+| Chat GPT | Used to improve problem statement wording. Structure prompts used for initial design, Colour code selection, review written report |
+
+**AI Use:** AI was used to explain concepts, debug specific errors, and clarify syntax. All JavaScript logic was understood by me. Any code suggested by AI was reviewed, understood, and adapted before use. No complete features were generated by AI.
+
 
 
 
